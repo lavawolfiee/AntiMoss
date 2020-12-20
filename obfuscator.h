@@ -37,9 +37,9 @@ public:
     std::string name = "Defines";
     std::string description = "Creates defines from random pieces of code."
                               "Code becomes unreadable";
-    double replace_probability = 0.5;
+    double replace_probability;
 
-    explicit Defines(double replace_probability=0.5): replace_probability(replace_probability) {}
+    explicit Defines(double replace_probability=0.6): replace_probability(replace_probability) {}
 
     std::string apply(const std::string &_s, int readability, int code_style) const override;
 };
